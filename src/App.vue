@@ -185,7 +185,6 @@ export default {
   },
   methods: {
     add(symbol = null) {
-      console.log(symbol);
       if (
         this.tickers.some(
           (ticker) => ticker.name === this.ticker.toUpperCase()
@@ -193,7 +192,6 @@ export default {
         !symbol &&
         typeof symbol === "string"
       ) {
-        console.log(this.tickers, this.ticker);
         this.isError = true;
         return;
       }
